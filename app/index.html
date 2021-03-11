@@ -16,45 +16,135 @@
 
 <body>
 	<header class="header">
-		<div class="container">
-			<div class="header__grid">
-				<div class="logo header-logo">
-					<a href="#"><img src="img/logo.png" alt="logo" /></a>
+		<div class="header__wrap">
+			<div class="container">
+				<div class="header__grid">
+					<div class="logo header-logo">
+						<a href="#"><img src="img/logo.png" alt="logo" /></a>
+					</div>
+					<button class="burger header__nav-btn">
+						<span class="burger__span"></span>
+					</button>
+					<ul class="header-menu">
+						<li><a href="#" class="header-menu__link">Каталог</a></li>
+						<li><a href="#" class="header-menu__link">Коллекции</a></li>
+						<li><a href="#" class="header-menu__link">Наши работы</a></li>
+						<li><a href="#" class="header-menu__link">Идеи оформления</a></li>
+						<li><a href="#" class="header-menu__link">О компании</a></li>
+					</ul>
+					<button class="header-search">Поиск</button>
+					<button class="header-btn header-btn__envelope"> <span class="header-btn__text-big">info@iskraled.com
+						</span>
+						<br> Отправить сообщение</button>
+					<button class="header-btn header-btn__call"><span class="header-btn__text-big">+7 499 404-17-80
+						</span><br>
+						Обратный звонок</button>
 				</div>
-				<button class="burger header__nav-btn">
-					<span class="burger__span"></span>
-				</button>
-				<ul class="header-menu">
-					<li><a href="#" class="header-menu__link">Каталог</a></li>
-					<li><a href="#" class="header-menu__link">Коллекции</a></li>
-					<li><a href="#" class="header-menu__link">Наши работы</a></li>
-					<li><a href="#" class="header-menu__link">Идеи оформления</a></li>
-					<li><a href="#" class="header-menu__link">О компании</a></li>
-				</ul>
-				<button class="header-btn header-search">Поиск</button>
-				<button class="header-btn"> <span class="btn-text-big">info@iskraled.com </span>
-					<br> Отправить сообщение</button>
-				<button class="header-btn"><span class="btn-text-big">+7 499 404-17-80 </span><br>
-					Обратный звонок</button>
 			</div>
 		</div>
 	</header>
 
 	<main class="hero">
-
+		<div class="container">
+			<h1 class="hero-title label1">Производим <span class="text__yellow">каркасную иллюминацию</span> и украшаем
+				объекты любой сложности с экономией до
+				60% бюджета!</h1>
+			<h2 class="hero-subtitle">
+				Работаем по всей <strong>РОССИИ</strong>
+			</h2>
+			<form action="#" class="hero-form form">
+				<img src="img/russian-flag.png" alt="	" class="hero-form__flag">
+				<h2 class="hero-form__header form__header">Получите дизайн проект бесплатно! <br>Мы подготовим для Вас
+					индивидуальный
+					дизайнпроект
+					для украшения вашего объекта</h2>
+				<label class="form__label hero-form__label" for="user_tel">Введите телефон</label>
+				<input class="form__input hero-form__input" type="text" name="user_tel" id="user_tel"
+					placeholder="+7 (___) ___ __ __">
+				<input class="form__submit btn hero-form__submit" type="submit" value="Получить дизайн проект">
+				<p class="hero-policy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и
+					соглашаетесь с <a href="#">Политикой конфиденциальности</a> </p>
+			</form>
+			<button class="hero-arrow"></button>
+		</div>
 	</main>
 
-	<section class="" id="">
+	<div class="block-separator"></div>
+	<section class="about">
+		<div class="container">
+			<h2 class="about-title block-title">Почему сотни клиентов доверяют нам оформление своих объектов — от
+				небольшого торгового центра до главной елки страны?</h2>
+			<div class="about__grid">
+				<div class="about-row one">
+					<div class="about-item left">
+						<div class="about-item__text text"><span class="text__yellow">Собственное производство 3000 м2</span>
+							— производим каркасную иллюминацию
+							и
+							<span class="text__yellow">украшаем объекты любойсложности с 2011 года</span></div>
+						<img src="img/about/gear.png" alt="" class="about-item__icon right">
+					</div>
+					<div class="about-item">
+						<img src="img/about/breafcase.png" alt="" class="about-item__icon left">
+						<div class="about-item__text text">Вы получите слаженную команду профессионалов — <span
+								class="text__yellow">более 600
+								выполненных работ и 1500 фигур в каталоге</span></div>
+					</div>
+				</div>
+				<div class="about-row two">
+					<div class="about-item left ">
+						<div class="about-item__text text">С нами Вы реализуете любые идеи и получите уникальный <span
+								class="text__yellow">дизайн
+								европейского уровня</span></div>
+						<img src="img/about/lamp.png" alt="" class="about-item__icon right">
+					</div>
+					<div class="about-item">
+						<img src="img/about/calendar.png" alt="" class="about-item__icon left">
+						<div class="about-item__text text">Вы получите украшенный объект точно в срок — <span
+								class="text__yellow">официально несем
+								ответственность за соблюдение сроков по договору</span></div>
+					</div>
+				</div>
+				<div class="about-row three">
+					<div class="about-item left ">
+						<div class="about-item__text text"><span class="text__yellow">Вы экономите до 60% бюджета</span> по
+							сравнению с европейскими
+							производителями</div>
+						<img src="img/about/hand.png" alt="" class="about-item__icon right">
+					</div>
+					<div class="about-item">
+						<img src="img/about/shild.png" alt="" class="about-item__icon left">
+						<div class="about-item__text text">Вы в безопасности — наша продукция <span
+								class="text__yellow">соответствует всем требованиям
+								технического регламента Евразийского союза</span></div>
+					</div>
+				</div>
+				<div class="about-row four">
+					<div class="about-item left ">
+						<div class="about-item__text text"><span class="text__yellow">Вы получите полный спектр услуг</span> —
+							от отрисовки дизайна до монтажа и
+							обслуживания без посредников</div>
+						<img src="img/about/instruments.png" alt="" class="about-item__icon right">
+					</div>
+					<div class="about-item">
+						<img src="img/about/geotag.png" alt="" class="about-item__icon left">
+						<div class="about-item__text text">С комфортом для Вас доставляем и <span
+								class="text__yellow">осуществляем монтаж во всех
+								городах России</span></div>
+					</div>
+				</div>
+			</div>
 
+
+		</div>
+		</div>
 	</section>
-
+	<div class="block-separator block-separator__after"></div>
 
 
 	<footer class="footer">
 		<div class="container">
 		</div>
 	</footer>
-
 
 	<!--Modal-->
 	<div class="modal">
