@@ -19,12 +19,12 @@
 		<div class="header__wrap">
 			<div class="container">
 				<div class="header__grid">
-					<div class="logo header-logo">
-						<a href="#"><img src="img/logo.png" alt="logo" /></a>
-					</div>
 					<button class="burger header__nav-btn">
 						<span class="burger__span"></span>
 					</button>
+					<div class="logo header-logo">
+						<a href="#"><img src="img/logo.png" alt="logo" /></a>
+					</div>
 					<ul class="header-menu">
 						<li><a href="#" class="header-menu__link">Каталог</a></li>
 						<li><a href="#" class="header-menu__link">Коллекции</a></li>
@@ -32,16 +32,52 @@
 						<li><a href="#" class="header-menu__link">Идеи оформления</a></li>
 						<li><a href="#" class="header-menu__link">О компании</a></li>
 					</ul>
-					<button class="header-search">Поиск</button>
-					<button class="header-btn header-btn__envelope"> <span class="header-btn__text-big">info@iskraled.com
-						</span>
-						<br> Отправить сообщение</button>
-					<button class="header-btn header-btn__call"><span class="header-btn__text-big">+7 499 404-17-80
-						</span><br>
-						Обратный звонок</button>
+					<button class="header-search"><span>Поиск</span></button>
+					<div class="header-connect-btns">
+						<button class="header-connect-btns__item header-btn header-btn__envelope"> <span
+								class="header-btn__text-big">info@iskraled.com
+							</span>
+							<br> Отправить сообщение</button>
+						<button class="header-connect-btns__item header-btn header-btn__call"><a href="tel:+7 499 404-17-80"
+								class="header-btn__text-big">+7 499 404-17-80
+							</a><br>
+							Обратный звонок</button>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div class="header-mobile-menu">
+			<button class="burger header__nav-btn">
+				<span class="burger__span"></span>
+			</button>
+			<div class="logo header-mobile-logo">
+				<a href="#"><img src="img/logo.png" alt="logo" /></a>
+			</div>
+			<ul class="header-mobile-menu">
+				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link header-menu__link"
+						href="#">Каталог</a></li>
+				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link header-menu__link"
+						href="#">Коллекции</a></li>
+				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link header-menu__link" href="#">Наши
+						работы</a>
+				</li>
+				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link header-menu__link " href="#">Идеи
+						оформления</a></li>
+				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link header-menu__link"
+						href="#contacts">О компании</a></li>
+				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link header-menu__link"
+						href="#contacts">Поиск</a></li>
+				<div class="header-mobile-menu__item header-mobile-menu-contacts">
+					<p class="header-mobile-menu__email">info@iskraled.com</p>
+					<p class="header-mobile-menu__phone">+7 499 404-17-80</p>
+				</div>
+				<div class="header-mobile-menu__item header-mobile-menu__socials">
+					<p class="header-mobile-menu__yotube"></p>
+					<p class="header-mobile-menu__vk"></p>
+					<p class="header-mobile-menu__facebook"></p>
+					<p class="header-mobile-menu__insta"></p>
+				</div>
+			</ul>
 	</header>
 
 	<main class="hero">
@@ -83,7 +119,7 @@
 							<span class="text__yellow">украшаем объекты любойсложности с 2011 года</span></div>
 						<img src="img/about/gear.png" alt="" class="about-item__icon right">
 					</div>
-					<div class="about-item">
+					<div class="about-item right">
 						<img src="img/about/breafcase.png" alt="" class="about-item__icon left">
 						<div class="about-item__text text">Вы получите слаженную команду профессионалов — <span
 								class="text__yellow">более 600
@@ -97,7 +133,7 @@
 								европейского уровня</span></div>
 						<img src="img/about/lamp.png" alt="" class="about-item__icon right">
 					</div>
-					<div class="about-item">
+					<div class="about-item right">
 						<img src="img/about/calendar.png" alt="" class="about-item__icon left">
 						<div class="about-item__text text">Вы получите украшенный объект точно в срок — <span
 								class="text__yellow">официально несем
@@ -111,7 +147,7 @@
 							производителями</div>
 						<img src="img/about/hand.png" alt="" class="about-item__icon right">
 					</div>
-					<div class="about-item">
+					<div class="about-item right">
 						<img src="img/about/shild.png" alt="" class="about-item__icon left">
 						<div class="about-item__text text">Вы в безопасности — наша продукция <span
 								class="text__yellow">соответствует всем требованиям
@@ -125,7 +161,7 @@
 							обслуживания без посредников</div>
 						<img src="img/about/instruments.png" alt="" class="about-item__icon right">
 					</div>
-					<div class="about-item">
+					<div class="about-item right">
 						<img src="img/about/geotag.png" alt="" class="about-item__icon left">
 						<div class="about-item__text text">С комфортом для Вас доставляем и <span
 								class="text__yellow">осуществляем монтаж во всех

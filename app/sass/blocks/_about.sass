@@ -1,30 +1,54 @@
 .about
 	background: #041B42
+	&-title
+		padding: 0 150px
+		@include _979
+			padding: 0 50px
 	&__grid
 		padding: 40px 0px
 		background-image: url(../img/about/about-deer.png)
-		background-position: 320px center
+		background-position: center center
 		background-repeat: no-repeat
 		background-size: 700px
+		@include _979
+			background-position: center -40px
+			background-size: 500px
+			padding: 400px 0 0 0
 	&-row
 		display: grid
-		grid-template-columns: 450px 450px
+		grid-template-columns: minmax(30%, 350px) minmax(30%, 350px)
 		justify-content: center
 		align-items: center
 		margin-bottom: 80px
+		@include _768
+			grid-template-columns: 100%
+			grid-row-gap: 30px
+			margin-bottom: 30px
+			justify-content: start
 		&:nth-child(4)
 			margin-bottom: 0
 		&.one, &.four
-			// margin-left: 70px
 			column-gap: 340px
+			@include _1170
+				column-gap: 240px
+			@include _979
+				column-gap: 50px
 		&.two, &.three
 			column-gap: 500px
+			@include _1170
+				column-gap: 400px
+			@include _979
+				column-gap: 50px
 	&-item
 		display: flex
 		flex-flow: row nowrap
 		align-items: center
 		&.left
 			text-align: right
+			@include _768
+				flex-direction: row-reverse
+				text-align: left
+				width: 90%
 		&__icon
 			width: 100px
 			height: 100px
@@ -32,3 +56,6 @@
 				margin-right: 20px
 			&.right
 				margin-left: 20px
+				@include _768
+					margin-left: 0
+					margin-right: 20px
