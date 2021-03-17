@@ -12,6 +12,8 @@
 
 	<!-- Add styles -->
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/libs/splide.min.css" />
+
 </head>
 
 <body>
@@ -129,13 +131,76 @@
 					</div>
 				</div>
 			</div>
-
-
-		</div>
 		</div>
 	</section>
 	<div class="block-separator block-separator__after"></div>
 
+	<section class="smi">
+		<div class="container">
+			<h2 class="smi-title block-title">Сми о нас</h2>
+			<div class="splide">
+				<div class="splide__track">
+					<ul class="smi-slider splide__list">
+						<li class="smi-slider__item splide__slide">
+							<iframe src="https://www.youtube.com/embed/6LobSM1k5Yk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</li>
+						<li class="smi-slider__item splide__slide">
+							<iframe src="https://www.youtube.com/embed/QnRujSkEItM?controls=0" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</li>
+						<li class="smi-slider__item splide__slide">
+							<iframe src="https://www.youtube.com/embed/N_eSStuikNo?controls=0" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</li>
+						<li class="smi-slider__item splide__slide">
+							<iframe src="https://www.youtube.com/embed/UbCYJs9OcHk?controls=0" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="promo">
+		<div class="container">
+			<h2 class="promo-title block-title">Акция</h2>
+			<div class="promo__wrap">
+				<div class="promo-left">
+					<p class="promo-left__subtitle"><span class="text__yellow">Получите <br> гирлянду «Бахрома»</span> <br> для оформления <br> своего дома (дачи) <br> <span
+							class="text__yellow">в
+							подарок!</span>
+					</p>
+					<p class="promo-left__subtitle-small">*при первом заказе</p>
+				</div>
+				<div class="promo-right">
+					<p class="promo-right__subtitle"></p>
+					<form action="#" class="promo-right-form form">
+						<h2 class="promo-form__header form__header">Оставьте заявку прямо сейчас на расчет стоимости украшения вашего объекта и получите гирлянду в подарок</h2>
+						<label class="form__label promo-form__label" for="user_tel">Введите телефон</label>
+						<input class="form__input promo-form__input" type="text" name="user_tel" id="user_tel" placeholder="+7 (___) ___ __ __">
+						<input class="form__submit btn promo-form__submit" type="submit" value="Получить дизайн проект">
+					</form>
+					<div class="promo-countdown">
+						<p class="promo-countdown__header">До конца акции осталось:</p>
+						<div class="promo-countdown__timer">
+							<p class="promo-countdown__timer-item">00</p>
+							<p class="promo-countdown__timer-item">55</p>
+							<p class="promo-countdown__timer-item">13</p>
+						</div>
+						<div class="promo-countdown__labels">
+							<p class="promo-countdown__labels-item">Часы</p>
+							<p class="promo-countdown__labels-item">Минуты</p>
+							<p class="promo-countdown__labels-item">Секунды</p>
+						</div>
+					</div>
+					<p class="promo-policy hero-policy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и
+						соглашаетесь с <a href="#">Политикой конфиденциальности</a> </p>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<footer class="footer">
 		<div class="container">
@@ -188,6 +253,8 @@
 	</svg>
 
 	<script src="js/main.js"></script>
+	<script src="js/splide.min.js"></script>
+	<script src="js/slider.js"></script>
 </body>
 
 </html>
