@@ -1288,7 +1288,6 @@ body {
   background: url(../img/promo-bg.jpg) no-repeat;
   background-position: center center;
   background-size: cover;
-  max-height: 760px;
   border-radius: 40px;
   border: none;
   display: -ms-grid;
@@ -1349,13 +1348,18 @@ body {
   color: #041B42;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 40px;
 }
 
 @media only screen and (max-width: 979px) {
   .promo-right {
     padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .promo-right {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 40px;
   }
 }
 
@@ -1450,5 +1454,75 @@ body {
 
 .promo-policy a {
   color: #085FF0;
+}
+
+.work-areas__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-gap: 40px;
+}
+
+@media only screen and (max-width: 979px) {
+  .work-areas__grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .work-areas__grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .work-areas__grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.work-areas__item {
+  min-height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(9, 37, 88, 0.48);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.work-areas__item:hover {
+  cursor: pointer;
+  background: rgba(9, 37, 88, 0.96);
+  border: 1px solid #085FF0;
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+}
+
+.work-areas__img {
+  margin: 20px auto;
+}
+
+.work-areas__name {
+  font-size: 2rem;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
