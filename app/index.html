@@ -13,6 +13,7 @@
 	<!-- Add styles -->
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/libs/splide.min.css" />
+	<link rel="stylesheet" href="fonts/style.css" />
 
 </head>
 
@@ -62,8 +63,8 @@
 					индивидуальный
 					дизайнпроект
 					для украшения вашего объекта</h2>
-				<label class="form__label hero-form__label" for="user_tel">Введите телефон</label>
-				<input class="form__input hero-form__input" type="text" name="user_tel" id="user_tel" placeholder="+7 (___) ___ __ __">
+				<p class="form__text hero-form__label" for="user_tel">Введите телефон</p>
+				<input class="form__input hero-form__input" type="tel" name="user_tel" id="user_tel" placeholder="+7 (___) ___ __ __">
 				<input class="form__submit btn hero-form__submit" type="submit" value="Получить дизайн проект">
 				<p class="hero-policy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и
 					соглашаетесь с <a href="#">Политикой конфиденциальности</a> </p>
@@ -163,39 +164,39 @@
 		</div>
 	</section>
 
-	<section class="promo">
+	<section class="card-promo">
 		<div class="container">
-			<h2 class="promo-title block-title">Акция</h2>
-			<div class="promo__wrap">
-				<div class="promo-left">
-					<p class="promo-left__subtitle"><span class="text__yellow">Получите <br> гирлянду «Бахрома»</span> <br> для оформления <br> своего дома (дачи) <br> <span
+			<h2 class="card-promo-title block-title">Акция</h2>
+			<div class="card-promo__grid card__grid">
+				<div class="card-promo-picture-area card__picture-area">
+					<p class="card-promo-picture-area__subtitle"><span class="text__yellow">Получите <br> гирлянду «Бахрома»</span> <br> для оформления <br> своего дома (дачи) <br> <span
 							class="text__yellow">в
 							подарок!</span>
 					</p>
-					<p class="promo-left__subtitle-small">*при первом заказе</p>
+					<p class="card-promo-picture-area__subtitle-small">*при первом заказе</p>
 				</div>
-				<div class="promo-right">
-					<p class="promo-right__subtitle"></p>
-					<form action="#" class="promo-right-form form">
-						<h2 class="promo-form__header form__header">Оставьте заявку прямо сейчас на расчет стоимости украшения вашего объекта и получите гирлянду в подарок</h2>
-						<label class="form__label promo-form__label" for="user_tel">Введите телефон</label>
-						<input class="form__input promo-form__input" type="text" name="user_tel" id="user_tel" placeholder="+7 (___) ___ __ __">
-						<input class="form__submit btn promo-form__submit" type="submit" value="Получить дизайн проект">
+				<div class="card-promo-action-area card__action-area">
+					<p class="card-promo-action-area__subtitle"></p>
+					<form action="#" class="card-form form">
+						<h2 class="card-form__header form__header">Оставьте заявку прямо сейчас на расчет стоимости украшения вашего объекта и получите гирлянду в подарок</h2>
+						<p class="form__text" for="user_tel">Введите телефон</p>
+						<input class="form__input card-form__input" type="tel" name="user_tel" id="user_tel" placeholder="+7 (___) ___ __ __">
+						<input class="form__submit btn card-form__submit" type="submit" value="Получить дизайн проект">
 					</form>
-					<div class="promo-countdown">
-						<p class="promo-countdown__header">До конца акции осталось:</p>
-						<div class="promo-countdown__timer">
-							<p class="promo-countdown__timer-item">00</p>
-							<p class="promo-countdown__timer-item">55</p>
-							<p class="promo-countdown__timer-item">13</p>
+					<div class="card-promo-countdown">
+						<p class="card-promo-countdown__header">До конца акции осталось:</p>
+						<div class="card-promo-countdown__timer">
+							<p class="card-promo-countdown__timer-item">00</p>
+							<p class="card-promo-countdown__timer-item">55</p>
+							<p class="card-promo-countdown__timer-item">13</p>
 						</div>
-						<div class="promo-countdown__labels">
-							<p class="promo-countdown__labels-item">Часы</p>
-							<p class="promo-countdown__labels-item">Минуты</p>
-							<p class="promo-countdown__labels-item">Секунды</p>
+						<div class="card-promo-countdown__labels">
+							<p class="card-promo-countdown__labels-item">Часы</p>
+							<p class="card-promo-countdown__labels-item">Минуты</p>
+							<p class="card-promo-countdown__labels-item">Секунды</p>
 						</div>
 					</div>
-					<p class="promo-policy hero-policy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и
+					<p class="card-policy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и
 						соглашаетесь с <a href="#">Политикой конфиденциальности</a> </p>
 				</div>
 			</div>
@@ -269,6 +270,113 @@
 				<div class="work-areas__item">
 					<img src="img/work-areas/item-16.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Медицинские учреждения</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="card-portfolio">
+		<div class="container">
+			<div class="card-portfolio__grid card__grid">
+				<div class="card-portfolio-action-area card__action-area">
+					<form action="#" class="card-form form">
+						<h2 class="card-form__header form__header">Получите закрытое портфолио наших работ </h2>
+						<p class="form__text" for="user_object">Какой объект украшаем?</p>
+						<input class="form__input card-form__input card-form__input-small" type="text" name="user_object" id="user_object" placeholder="Укажите какой объект украшаете">
+						<p class="form__text">Куда прислать потфолио</p>
+						<div class="form__radio-btns">
+							<input class="card-form__input-radio " type="radio" name="user_messenger" id="user_messenger_whatsApp">
+							<label class="form__label" for="user_messenger_whatsApp"> <i class="icon icon-whatsapp"></i></label>
+
+							<input class="card-form__input-radio " type="radio" name="user_messenger" id="user_messenger_telegram">
+							<label class="form__label" for="user_messenger_telegram"><i class="icon icon-telegram"></i></label>
+
+							<input class="card-form__input-radio " type="radio" name="user_messenger" id="user_messenger_viber">
+							<label class="form__label" for="user_messenger_viber"><i class="icon icon-viber"></i></label>
+
+							<input class="card-form__input-radio " type="radio" name="user_messenger" id="user_messenger_email">
+							<label class="form__label" for="user_messenger_email"><i class="icon icon-mail"></i></label>
+						</div>
+						<p class="form__text" for="user_tel">Введите телефон</p>
+						<input class="form__input card-form__input" type="tel" name="user_tel" id="user_tel" placeholder="+7 (___) ___ __ __">
+						<input class="form__submit btn card-form__submit" type="submit" value="Получить дизайн проект">
+					</form>
+					<p class="card-policy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и
+						соглашаетесь с <a href="#">Политикой конфиденциальности</a> </p>
+				</div>
+				<div class="card-portfolio-picture-area card__picture-area">
+					<img src="img/card-portfolio/promo-book.png" alt="" class="card-portfolio-picture-area__img">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="portfolio">
+		<div class="container__portfolio">
+			<h2 class="portfolio-title block-title">Примеры выполненных работ</h2>
+			<div class="portfolio-slider">
+				<div class="splide__track">
+					<div class="portfolio__outer-grid splide__list">
+						<div class="portfolio-inner-grid splide__slide">
+							<div class="portfolio-inner-grid__center-down">
+								<a href="#"><img src="img/portfolio/item-1.jpg" alt=""></a>
+							</div>
+							<div class="portfolio-inner-grid__center-down">
+								<a href="#"><img src="img/portfolio/item-2.jpg" alt=""></a>
+							</div>
+							<div class="portfolio-inner-grid__center-down">
+								<a href="#"><img src="img/portfolio/item-3.jpg" alt=""></a>
+							</div>
+							<div class="portfolio-inner-grid__center-down">
+								<a href="#"><img src="img/portfolio/item-4.jpg" alt=""></a>
+							</div>
+						</div>
+						<div class="portfolio-inner-grid splide__slide">
+							<div class="portfolio-inner-grid__item portfolio-inner-grid__top-left">
+								<a href="#"><img src="img/portfolio/item-5.jpg" alt=""></a>
+							</div>
+							<div class="portfolio-inner-grid__item portfolio-inner-grid__top-left">
+								<a href="#"><img src="img/portfolio/item-6.jpg" alt=""></a>
+							</div>
+							<div class="portfolio-inner-grid__item portfolio-inner-grid__top-left">
+								<a href="#"><img src="img/portfolio/item-7.jpg" alt=""></a>
+							</div>
+							<div class="portfolio-inner-grid__item portfolio-inner-grid__top-left">
+								<a href="#"><img src="img/portfolio/item-8.jpg" alt=""></a>
+							</div>
+						</div>
+						<div class="portfolio-inner-grid splide__slide">
+							<div class="portfolio-inner-grid__item portfolio-inner-grid__bottom-bottom">
+								<a href="#"><img src="img/portfolio/item-9.jpg" alt=""></a>
+							</div>
+							<div class="portfolio-inner-grid__item portfolio-inner-grid__bottom-bottom">
+								<a href="#"><img src="img/portfolio/item-10.jpg" alt=""></a>
+							</div>
+							<div class="portfolio-inner-grid__item portfolio-inner-grid__bottom-bottom">
+								<a href="#"><img src="img/portfolio/item-11.jpg" alt=""></a>
+							</div>
+							<div class="portfolio-inner-grid__item portfolio-inner-grid__bottom-bottom">
+								<a href="#"><img src="img/portfolio/item-12.jpg" alt=""></a>
+							</div>
+						</div>
+						<div class="portfolio-inner-grid splide__slide">
+							<div class="portfolio-inner-grid__item portfolio-inner-grid__center-top">
+								<a href="#"><img src="img/portfolio/item-13.jpg" alt=""></a>
+							</div>
+							<div class="portfolio-inner-grid__item portfolio-inner-grid__center-top">
+								<a href="#"><img src="img/portfolio/item-14.jpg" alt=""></a>
+							</div>
+							<div class="portfolio-inner-grid__item portfolio-inner-grid__center-top">
+								<a href="#"><img src="img/portfolio/item-15.jpg" alt=""></a>
+							</div>
+							<div class="portfolio-inner-grid__item portfolio-inner-grid__center-top">
+								<a href="#"><img src="img/portfolio/item-16.jpg" alt=""></a>
+							</div>
+						</div>
+						<a href="#" class="portfolio__see-more">
+							Смотреть <br> все работы
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

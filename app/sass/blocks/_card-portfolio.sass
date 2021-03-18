@@ -1,0 +1,28 @@
+.card-portfolio
+	&__grid
+		margin-top: 180px
+		grid-template-columns: 40% 60%
+		@include _768
+			grid-template-columns: 100%
+			grid-template-rows: 1fr 1fr
+	&-action-area
+		border-top-left-radius: 40px
+		border-bottom-left-radius: 40px
+		@include _768
+			grid-row: 2
+			border-bottom-right-radius: 40px
+			border-top-left-radius: 0px
+	&-picture-area
+		background: url(../img/card-portfolio/promo-portfolio-stars.png) , url(../img/card-portfolio/card-portfolio-stars2.png)
+		background-color: rgb(9, 37, 88)
+		background-position: center center
+		background-repeat: no-repeat no-repeat
+		background-color-size: 200px
+		background-blend-mode: color-dodge
+		border-top-right-radius: 40px
+		border-bottom-right-radius: 40px
+		@include _768
+			grid-row: 1
+			border-top-left-radius: 40px
+		&__img
+			transform: scale(1.1)

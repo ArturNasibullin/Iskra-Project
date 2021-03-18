@@ -1,22 +1,12 @@
-.promo
-	&__wrap
+.card-promo
+	&__grid
 		background: url(../img/promo-bg.jpg) no-repeat
 		background-position: center center
 		background-size: cover
-		border-radius: 40px
-		border: none
-		display: grid
-		grid-template-columns: 60% 40%
 		@include _768
-			grid-template-columns: 100%
-			grid-template-rows: 1fr 1fr
-	&-left
-		display: flex
-		justify-content: center
-		align-items: center
-		flex-direction: column
-		@include _768
-			padding: 100px 0
+			background-position: -50px 0
+			background-size: 1100px 700px
+	&-picture-area
 		&__subtitle
 			text-transform: uppercase
 			text-align: center
@@ -28,30 +18,12 @@
 				margin-top: 40px
 				font-size: 2rem
 				line-height: 24px
-	&-right
-		background-color: $colors__white
-		padding: 30px 70px
-		color: $colors__btn-text
+	&-action-area
 		border-top-right-radius: 40px
 		border-bottom-right-radius: 40px
-		@include _979
-			padding: 30px
 		@include _768
 			border-top-right-radius: 0px
 			border-bottom-left-radius: 40px
-	&-form
-		&__header
-			color: $colors__btn-text
-		&__input
-			text-align: center
-			@include _768
-				font-size: 4rem
-		&__submit
-			display: block
-			margin: 20px auto
-			@include _768
-				width: 100%
-				font-size: 3.2rem
 	&-countdown
 		margin: 40px 0
 		&__header
@@ -88,7 +60,3 @@
 				font-size: 1.6rem
 				line-height: 33px
 				color: $colors__btn-text
-	&-policy
-		color: $colors__gray-light
-		a
-			color: #085FF0
