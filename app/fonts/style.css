@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'icomoon';
-	src: url('iconmoon/icomoon.eot?emzufj');
-	src: url('iconmoon/icomoon.eot?emzufj#iefix') format('embedded-opentype'), url('iconmoon/icomoon.ttf?emzufj') format('truetype'),
-		url('iconmoon/icomoon.woff?emzufj') format('woff'), url('iconmoon/icomoon.svg?emzufj#icomoon') format('svg');
+	src: url('iconmoon/icomoon.eot?cm8638');
+	src: url('iconmoon/icomoon.eot?cm8638#iefix') format('embedded-opentype'), url('iconmoon/icomoon.ttf?cm8638') format('truetype'),
+		url('iconmoon/icomoon.woff?cm8638') format('woff'), url('iconmoon/icomoon.svg?cm8638#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;
@@ -12,6 +12,7 @@
 [class*=' icon-'] {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: 'icomoon' !important;
+	speak: never;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -23,8 +24,9 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-mail:before {
-	content: '\e903';
+.icon-gmail:before {
+	content: '\e904';
+	color: #d14836;
 }
 .icon-telegram:before {
 	content: '\e900';

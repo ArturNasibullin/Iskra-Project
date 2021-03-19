@@ -49,6 +49,14 @@ window.addEventListener('DOMContentLoaded', () => {
 		// }
 	});
 
+	//Call button
+	let callBtn = document.querySelector('.header-btn__call');
+	if (window.matchMedia('(max-width: 480px)').matches) {
+		callBtn.addEventListener('click', () => {
+			callBtn.classList.toggle('active');
+		});
+	}
+
 	let animatedItem = document.querySelectorAll('.animate__animated');
 	animatedItem.forEach((item) => {
 		item.style.opacity = 0;
