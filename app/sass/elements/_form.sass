@@ -24,6 +24,31 @@
 		width: 100%
 		font-size: 2.8rem
 		line-height: 33px
+	&__inputfile
+		width: 0.1px
+		height: 0.1px
+		opacity: 0
+		overflow: hidden
+		position: absolute
+		z-index: -1
+	&__load
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%), #092558
+		border-radius: 60px
+		cursor: pointer
+		display: flex
+		justify-content: center
+		align-items: center
+		color: $colors__white
+		font-size: 2rem
+		&::before
+			content: ""
+			margin-right: 11px
+			width: 32px
+			height: 30px
+			background-image: url(../img/icons/camera.png)
+			background-position: center center
+			background-size: contain
+			background-repeat: no-repeat
 	&__radio-btns
 		margin: 20px
 		display: flex

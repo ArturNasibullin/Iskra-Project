@@ -1,0 +1,47 @@
+.catalog
+	&-grid
+		display: grid
+		grid-template-columns: repeat(4,1fr)
+		grid-template-rows: repeat(2,1fr)
+		grid-gap: 40px
+		padding: 5px 0
+		position: relative
+		@include _768
+			grid-template-columns: repeat(2, 1fr)
+			grid-template-rows: repeat(4, 1fr)
+			grid-gap: 20px
+		@include _480
+			grid-template-columns: 100%
+			grid-template-rows: repeat(8, 1fr)
+	&-item
+		border-radius: 10px
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+		justify-content: center
+		padding: 45px 0 60px
+		transition: all 0.3s
+		cursor: pointer
+		&:hover
+			background: $colors__background-hover
+			border: 1px solid #085FF0
+		&__img
+			margin-bottom: 40px
+	&-btn
+		display: block
+		width: 30%
+		margin: 70px auto
+		text-align: center
+		background-color: none
+		color: $colors__white
+		border: 1px solid rgba(255, 255, 255, 0.24)
+		border-radius: 60px
+		padding: 30px
+		transition: all 0.3s
+		@include _768
+			width: 70%
+		@include _480
+			width: 100%
+		&:hover
+			background: $colors__background-hover
+			border: 1px solid #085FF0
