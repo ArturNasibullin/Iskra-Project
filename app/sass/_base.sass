@@ -3,9 +3,11 @@ html
 body
 	font-family: $font-family__gilroy
 	font-weight: $font-weight__gilroy--medium
+	line-height: 1.1
 	color: $colors__text
 	overflow-x: hidden
 	background: #092558
+	box-sizing: border-box
 .container
 	box-sizing: border-box
 	max-width: 1400px
@@ -34,3 +36,31 @@ body
 	&__after
 		transform: rotate(180deg)
 		margin-top: 0
+.stars-block
+	background-image: url(../img/stars-bg2.png), radial-gradient(50% 50% at 50% 50%, rgba(8, 95, 240, 0.32) 0%, rgba(8, 95, 240, 0) 100%), radial-gradient(50% 50% at 50% 50%, rgba(4, 27, 66, 0) 83.33%, rgba(4, 27, 66, 0.32) 100%)
+	background-color: rgb(9, 37, 88)
+	box-shadow: inset rgb(9, 37, 88) 0 0 40px 10px,rgb(9, 37, 88) 0 0 24px 12px
+	opacity: .6
+	background-position: center center
+	background-repeat: no-repeat no-repeat
+	background-color-size: 200px
+	background-blend-mode: color-dodge
+	width: 500px
+	height: 500px
+	border-radius: 50%
+	position: absolute
+	z-index: -1
+	@include _768
+		width: 300px
+		height: 300px
+	&__ar-top
+		top: -240px
+		left: 75px
+	&__ar-bottom
+		bottom: -275px
+		right: 0
+.blur-card
+	background: rgba(4, 27, 66, 0.4)
+	border: 1px solid rgba(255, 255, 255, 0.24)
+	backdrop-filter: blur(16px)
+	border-radius: 40px

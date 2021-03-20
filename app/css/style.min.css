@@ -117,7 +117,7 @@ button {
   line-height: 110%;
   font-weight: 500;
   color: #fff;
-  margin: 60px auto;
+  margin: 160px auto 60px;
   text-align: center
 }
 .text__yellow {
@@ -559,6 +559,7 @@ html {
 body {
   font-family: Gilroy;
   font-weight: 500;
+  line-height: 1.1;
   color: #fff;
   overflow-x: hidden;
   background: #092558
@@ -1398,6 +1399,19 @@ body {
     -webkit-transform: scale(.75);
     transform: scale(.75)
   }
+}
+.ar-wrap {
+  background: -webkit-gradient(linear,left top,left bottom,from(#092558),color-stop(14.58%,rgba(4,27,66,.6)),color-stop(21.87%,rgba(4,27,66,0)),color-stop(88.02%,rgba(4,27,66,0)),to(#092558)),radial-gradient(50% 50% at 50% 50%,rgba(4,27,66,0) 83.33%,rgba(4,27,66,.32) 100%),url(../img/ar/ar-bg.jpg);
+  background: -o-linear-gradient(top,#092558 0,rgba(4,27,66,.6) 14.58%,rgba(4,27,66,0) 21.87%,rgba(4,27,66,0) 88.02%,#092558 100%),-o-radial-gradient(50% 50%,50% 50%,rgba(4,27,66,0) 83.33%,rgba(4,27,66,.32) 100%),url(../img/ar/ar-bg.jpg);
+  background: linear-gradient(180deg,#092558 0,rgba(4,27,66,.6) 14.58%,rgba(4,27,66,0) 21.87%,rgba(4,27,66,0) 88.02%,#092558 100%),radial-gradient(50% 50% at 50% 50%,rgba(4,27,66,0) 83.33%,rgba(4,27,66,.32) 100%),url(../img/ar/ar-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+.ar-subtitle {
+  font-size: 3.2rem;
+  color: #ffd800;
+  text-align: center
 }
 @media (min-width:480px) {
   html {
