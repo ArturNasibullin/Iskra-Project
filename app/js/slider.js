@@ -41,4 +41,23 @@ document.addEventListener('DOMContentLoaded', function () {
 			pagination: 'portfolio__pagination',
 		},
 	}).mount();
+
+	new Splide('.clients-slider', {
+		perPage: 5,
+		perMove: 1,
+		type: 'loop',
+		pagination: false,
+		arrows: false,
+		autoplay: true,
+		interval: 2000,
+		breakpoints: {
+			979: {
+				perPage: 4,
+				drag: true,
+			},
+			768: {
+				perPage: 2,
+			},
+		},
+	}).mount();
 });
