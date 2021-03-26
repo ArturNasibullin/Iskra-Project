@@ -1,0 +1,72 @@
+.contacts
+	&-grid
+		margin: 70px 0
+		display: grid
+		grid-template-columns: 40% 55%
+		grid-gap: 40px
+		@include _768
+			grid-template-columns: 100%
+			grid-template-rows: 30% 70%
+	&-info
+		font-size: 2rem
+		line-height: 1.4
+		@include _768
+			text-align: center
+		&__title
+			font-size: 4rem
+		&__address
+			margin: 20px 0
+	&-card
+		padding: 50px
+		&__header
+			font-size: 2.6rem
+			text-align: center
+			padding: 0 100px
+			@include _979
+				padding: 0 30px
+		&__socials
+			display: grid
+			grid-template-columns: repeat(3,1fr)
+			grid-gap: 20px
+			margin-top: 60px
+			@include _979
+				grid-template-columns: 100%
+				grid-template-rows: repeat(3, 1fr)
+		&__social
+			border-radius: 100px
+			border: 3px solid
+			padding: 15px 30px
+			font-size: 2rem
+			display: flex
+			flex-flow: row nowrap
+			justify-content: start
+			align-items: center
+			cursor: pointer
+			@include _1170
+				padding: 10px
+			@include _979
+				padding: 15px 30px
+			&__img
+				width: 40px
+				height: 40px
+				margin-right: 10px
+			&-viber
+				transition: color .2s
+				border-color: #9872F2
+				&:hover
+					color: #9872F2
+			&-telegram
+				border-color: #2AABEE
+				transition: color .2s
+				&:hover
+					color: #2AABEE
+			&-whatsapp
+				border-color: #60D66A
+				transition: color .2s
+				&:hover
+					color: #60D66A
+	&-map
+		iframe
+			margin: 0 auto
+			width: 100%
+			height: 740px

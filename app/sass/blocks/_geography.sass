@@ -1,0 +1,24 @@
+.geography
+	@include _768
+		min-height: 850px
+		margin-bottom: 90px
+		position: relative
+	&-map
+		overflow-x: scroll
+		overflow-y: visible
+		&__img
+			min-width: 800px
+			height: auto
+	@include _768
+		&::after
+			content: ""
+			display: inline-block
+			width: 120px
+			height: 126px
+			background: url(../img/icons/finger-scroll.png)
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: contain
+			position: absolute
+			bottom: -120px
+			left: calc( 50% - 20px )

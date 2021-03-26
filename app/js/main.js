@@ -57,6 +57,37 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
+	//Accordion FAQ
+	let faqGrid = document.querySelector('.faq-grid');
+	let plus = document.querySelectorAll('.faq-item__plus');
+	let faqItem = document.querySelectorAll('.faq-item');
+
+	const open = (button, dropDown, plus) => {
+		button.classList.add('active');
+		dropDown.classList.add('active');
+		plus.classList.add('active');
+	};
+	const close = (button, dropDown, plus) => {
+		button.classList.remove('active');
+		dropDown.classList.remove('active');
+		plus.classList.remove('active');
+	};
+
+	faqGrid.addEventListener('click', (event) => {
+		let target = event.target;
+		if (target.classList.contains('faq-item__question')) {
+			const parent = target.closest('.faq-item');
+			const answer = parent.querySelector('.faq-item__answer');
+			const plus = parent.querySelector('.faq-item__plus');
+			answer.classList.contains('active') ? close(target, answer, plus) : open(target, answer, plus);
+		}
+	});
+
+	let plusActive = function () {
+		plus.forEach((item) => {
+			item.classList.toggle('active');
+		});
+	};
 	let animatedItem = document.querySelectorAll('.animate__animated');
 	animatedItem.forEach((item) => {
 		item.style.opacity = 0;

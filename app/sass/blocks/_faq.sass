@@ -1,0 +1,41 @@
+.faq
+	&-grid
+		display: flex
+		flex-direction: column
+		max-width: 920px
+		margin: 0 auto
+		font-size: 2.6rem
+	&-item
+		position: relative
+		cursor: pointer
+		border-bottom: 1px solid rgba(255, 255, 255, 0.24)
+		&__question
+			padding: 35px 30px 35px 0
+		&:nth-child(1)
+			border-top: 1px solid rgba(255, 255, 255, 0.24)
+		&__answer
+			height: 0
+			opacity: 0
+			visibility: hidden
+			font-size: 2rem
+			color: rgba(255, 255, 255, 0.5)
+			transition: all 0.2s
+			&.active
+				height: auto
+				opacity: 1
+				visibility: visible
+				padding-bottom: 20px
+		&__plus
+			position: absolute
+			right: 15px
+			top: calc( 50px - 15px )
+			width: 30px
+			height: 30px
+			fill: none
+			opacity: 0.2
+			stroke: #fff
+			transition: all 0.3s
+			&.active
+				stroke: $colors__primary
+				opacity: 1
+				transform: rotate(45deg)

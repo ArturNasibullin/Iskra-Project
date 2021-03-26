@@ -1,0 +1,38 @@
+.card-economy
+	&__grid
+	&-picture-area
+		border-top-left-radius: 40px
+		border-bottom-left-radius: 40px
+		@include _768
+			border-top-right-radius: 40px
+			border-top-left-radius: 40px
+		&__text
+			padding: 60px 30px 20px
+			text-align: center
+			font-size: 4rem
+			letter-spacing: 0.05em
+			span
+				font-size: 16.2rem
+				letter-spacing: 0.05em
+				display: block
+				margin: 20px 0
+			&-small
+				text-align: center
+				margin-top: 40px
+				font-size: 2rem
+				padding: 0 150px
+				margin-bottom: 60px
+				@include _979
+					padding: 0
+
+	&-action-area
+		border-top-right-radius: 40px
+		border-bottom-right-radius: 40px
+		@include _768
+			border-top-right-radius: 0px
+			border-bottom-left-radius: 40px
+		&__title
+			text-align: center
+			font-size: 2.6rem
+			color: $colors__dark-blue
+			margin: 30px 20px	40px

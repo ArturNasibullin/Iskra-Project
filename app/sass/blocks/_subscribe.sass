@@ -1,0 +1,53 @@
+.subscribe
+	background: url(../img/subscribe/card-subscribe-bg.png), #092558
+	background-repeat: no-repeat
+	background-position: center right
+	background-size: contain
+	background-blend-mode: color-dodge
+	@include _768
+		background-position: center 150px
+	&-wrap
+		background: url(../img/subscribe/big-star.png)
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: center right
+		@include _768
+			background-position: center 30px
+	&-card
+		margin-left: 130px
+		max-width: 760px
+		height: 400px
+		padding: 40px
+		text-align: center
+		position: relative
+		@include _979
+			margin: 0 auto
+		@include _768
+			margin-top: 400px
+			width: auto
+			height: auto
+		&__title
+			font-size: 2.6rem
+			line-height: 1.4
+		&__text
+			font-size: 2rem
+			color: rgba(255, 255, 255, 0.5)
+			padding: 10px 0
+		&__input
+			padding-left: 40px
+			height: 90px
+			@include _768
+				text-align: center
+		&__submit
+			position: absolute
+			height: 70px
+			width: 300px
+			top: 240px
+			right: 50px
+			padding: 20px
+			@include _768
+				display: block
+				margin: 20px auto
+				position: static
+		&>.card-policy
+			color: rgba(255, 255, 255, 0.5)

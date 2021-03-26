@@ -18,6 +18,7 @@ $normal-letter-spacing: normal
 $font-family__gilroy: 'Gilroy'
 $font-family__roboto: 'Roboto'
 
+$font-weight__gilroy--light: 300
 $font-weight__gilroy--regular: 400
 $font-weight__gilroy--medium: 500
 $font-weight__roboto--regular: 400
@@ -50,7 +51,7 @@ $font-weight__roboto--regular: 400
 .label1
   font-size: 5.6rem
   font-weight: $font-weight__gilroy--medium
-  line-height: 1.1
+  line-height: 1.2
   text-align: center
   text-shadow: 0px 4px 8px #041B42
   margin-top: 50px
@@ -65,18 +66,22 @@ $font-weight__roboto--regular: 400
   text-align: center
 .text__yellow
   color: $colors__primary
+.text-gradient
+  background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 0.5) 15.96%, rgba(255, 255, 255, 0) 78.72%), linear-gradient(0deg, #FFD800, #FFD800)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
 .text-roboto
   font-family: $font-family__roboto
   font-weight: $font-weight__roboto--regular
   font-size: 1.6rem
-  line-height: 1.1
+  line-height: 1.2
   @include _768
     font-size: 2.4rem
 .text
   font-family: $font-family__gilroy
-  font-weight: $font-weight__gilroy--regular
+  font-weight: $font-weight__gilroy--light
   font-size: 2rem
-  line-height: 1.1
+  line-height: 1.2
   color: $colors__white
   &__reglament
     font-size: 2.6rem
@@ -87,7 +92,7 @@ $font-weight__roboto--regular: 400
   font-family: $font-family__gilroy
   font-weight: $font-weight__gilroy--regular
   font-size: 2.6rem
-  line-height: 31px
+  line-height: 1.2
   text-align: center
   color: $colors__text
 // .dark-text

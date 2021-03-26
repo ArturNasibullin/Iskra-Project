@@ -1,28 +1,70 @@
 .footer
-	background-color: $colors__level1
-	&__grid
-		padding: 80px 0
+	background: url(../img/light-ball.png)
+	background-repeat: no-repeat
+	background-position: center right
+	background-size: contain
+	&-grid
 		display: grid
-		grid-template-columns: 60% 20% 20%
-		@include _480
-			grid-template-columns: 100%
+		grid-template-columns: repeat(4, 1fr)
+		margin-bottom: 40px
+	&__list
+		font-size: 2.4rem
+		font-weight: $font-weight__gilroy--medium
+		display: flex
+		flex-flow: column nowrap
+		align-items: start
+		justify-content: start
+		margin-bottom: 30px
+	&__item
+		margin: 10px 0
+	&__link
+		transition: color .2s
+		&:hover
+			color: $colors__primary
+	&-contact-form
+		padding-left: 30px
+		&__number
+			font-size: 3.2rem
+			font-weight: $font-weight__gilroy--medium
+			text-align: center
+			margin-bottom: 20px
+		&__input
+			font-size: 2rem
+			background: $colors__gray-light
+			border: 1px solid rgba(255, 255, 255, 0.24)
+			backdrop-filter: blur(16px)
+			color: $colors__white
+			text-align: center
+			height: 70px
+			margin-bottom: 20px
+		&__submit
+			width: 100%
+		&>.card-policy
+			font-size: 1.2rem
+			color: rgba(255, 255, 255, 0.5)
 	&-socials
-		margin: 32px 0 140px
-		display: flex
-		flex-flow: row no-wrap
-		@include _480
-			margin: 32px 0
+		&__title
+			text-align: center
+		&-items
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-between
+			align-items: center
+			padding: 40px 0
 		&__item
-			margin-right: 16px
-	&-menu
-		display: flex
-		flex-direction: column
-		font-size: 1.6em
-		&__link
-			width: 70%
-			padding: 15px 0 15px 10px
-			background: transparent
-			transition: all 0.3s
+			position: relative
 			cursor: pointer
+			&::before
+				transition: all 0.2s
+				content: ""
+				width: 50px
+				height: 50px
+				border-radius: 50%
+				position: absolute
+				left: calc( 50% - 25px )
+				top: calc( 50% - 25px )
+				background-color: $colors__background
+				border: 0.5px solid $colors__dark-gray
 			&:hover
-				background-color: $colors__primary
+				&::before
+					border-color: $colors__white
