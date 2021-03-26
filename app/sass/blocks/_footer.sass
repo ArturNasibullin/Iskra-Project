@@ -7,6 +7,15 @@
 		display: grid
 		grid-template-columns: repeat(4, 1fr)
 		margin-bottom: 40px
+		@include _979
+			grid-template-columns: repeat(2, 1fr )
+			grid-row-gap: 90px
+		@include _480
+			grid-template-columns: 50% 50%
+			grid-template-rows: repeat(3, 1fr)
+	&-ideas
+		@include _480
+			grid-column: 1/3
 	&__list
 		font-size: 2.4rem
 		font-weight: $font-weight__gilroy--medium
@@ -23,6 +32,9 @@
 			color: $colors__primary
 	&-contact-form
 		padding-left: 30px
+		@include _480
+			grid-column: 1/3
+			padding-left: 0
 		&__number
 			font-size: 3.2rem
 			font-weight: $font-weight__gilroy--medium
@@ -43,6 +55,7 @@
 			font-size: 1.2rem
 			color: rgba(255, 255, 255, 0.5)
 	&-socials
+		padding: 0 10px
 		&__title
 			text-align: center
 		&-items
