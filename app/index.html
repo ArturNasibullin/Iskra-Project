@@ -14,28 +14,32 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/libs/splide.min.css" />
 	<link rel="stylesheet" href="fonts/style.css" />
+	<link rel="stylesheet" href="css/libs/aos.css" />
 
 </head>
 
 <body>
-	<header class="header">
+	<!-- <header class="header">
+		<button class="burger header__nav-btn">
+			<span class="burger__span"></span>
+		</button>
 		<div class="header__wrap">
 			<div class="container">
 				<div class="header__grid">
-					<button class="burger header__nav-btn">
-						<span class="burger__span"></span>
-					</button>
 					<div class="logo header-logo">
-						<a href="#"><img src="img/logo.png" alt="logo" /></a>
+						<a href="#hero"><img src="img/logo.png" alt="logo" /></a>
 					</div>
 					<ul class="header-menu">
-						<li><a href="#" class="header-menu__link">Каталог</a></li>
-						<li><a href="#" class="header-menu__link">Коллекции</a></li>
-						<li><a href="#" class="header-menu__link">Наши работы</a></li>
-						<li><a href="#" class="header-menu__link">Идеи оформления</a></li>
-						<li><a href="#" class="header-menu__link">О компании</a></li>
+						<li><a href="#catalog" class="header-menu__link">Каталог</a></li>
+						<li><a href="#portfolio" class="header-menu__link">Наши работы</a></li>
+						<li><a href="#work-areas" class="header-menu__link">Идеи оформления</a></li>
+						<li><a href="#team" class="header-menu__link">Наша команда</a></li>
+						<li><a href="#about" class="header-menu__link">О компании</a></li>
 					</ul>
-					<button class="header-search"><span>Поиск</span></button>
+					<form action="#" class="header-form">
+						<label for="header_search" class="header-form__label">&nbsp;</label>
+						<input type="text" id="header_search" name="header_search" class="header-form__search" placeholder="Поиск"></input>
+					</form>
 					<div class="header-connect-btns">
 						<a href="mailto:info@iskraled.com" class="header-connect-btns__item header-btn header-btn__envelope"> <span class="header-btn__text-big">info@iskraled.com</span>
 							<br> Отправить сообщение</a>
@@ -46,9 +50,40 @@
 				</div>
 			</div>
 		</div>
-	</header>
+		<div class="mobile-menu">
+			<div class="logo mobile-menu-logo">
+				<a href="#"><img src="img/logo.png" alt="logo" /></a>
+			</div>
+			<ul class="mobile-menu-list">
+				<li><a href="#catalog" class="mobile-menu__link">Каталог</a></li>
+				<li><a href="#portfolio" class="mobile-menu__link">Наши работы</a></li>
+				<li><a href="#work-areas" class="mobile-menu__link">Идеи оформления</a></li>
+				<li><a href="#team" class="mobile-menu__link">Наша команда</a></li>
+				<li><a href="#about" class="mobile-menu__link">О компании</a></li>
+				<li><a href="#" class="mobile-menu__link">Поиск</a></li>
+			</ul>
+			<div class="mobile-menu-connect-btns">
+				<a href="mailto:info@iskraled.com" class="mobile-connect-btns__btn">info@iskraled.com</a>
+				<a href="tel:+7 499 404-17-80" class="mobile-connect-btns__btn"> +7 499 404-17-80</a>
+			</div>
+			<div class="mobile-menu-socials">
+				<a href="#" class="mobile-menu-socials__item">
+					<img src="img/icons/youtube.png" alt="" class="mobile-menu-socials__img">
+				</a>
+				<a href="#" class="mobile-menu-socials__item">
+					<img src="img/icons/vk.png" alt="" class="mobile-menu-socials__img">
+				</a>
+				<a href="#" class="mobile-menu-socials__item">
+					<img src="img/icons/facebook.png" alt="" class="mobile-menu-socials__img">
+				</a>
+				<a href="#" class="mobile-menu-socials__item">
+					<img src="img/icons/instagram.png" alt="" class="mobile-menu-socials__img">
+				</a>
+			</div>
+		</div>
+	</header> -->
 
-	<main class="hero">
+	<main class="hero" id="hero">
 		<div class="hero-wrap">
 			<div class="container">
 				<h1 class="hero__title label1">Производим <span class="text__yellow">каркасную иллюминацию</span> и украшаем
@@ -57,80 +92,83 @@
 				<h2 class="hero__subtitle">
 					Работаем по всей <strong>РОССИИ</strong>
 				</h2>
-				<div class="hero-card blur-card">
+				<div class="hero-card blur-card capture-card">
 					<img src="img/russian-flag.png" alt="	" class="hero-form__flag">
-					<h3 class="hero-card__header form__header ">Получите дизайн проект бесплатно! <br>Мы подготовим для Вас
+					<h3 class="capture-card__title">Получите дизайн проект бесплатно! <br>Мы подготовим для Вас
 						индивидуальный
 						дизайнпроект
 						для украшения вашего объекта</h3>
 					<form action="#" class="hero-form form">
-						<p class="form__text hero-form__label" for="user_tel">Введите телефон</p>
-						<input class="form__input hero-form__input" type="tel" name="user_tel" id="user_tel" placeholder="+7 (___) ___ __ __">
-						<input class="form__submit btn hero-form__submit" type="submit" value="Получить дизайн проект">
+						<label class="form__text capture-card__form-label" for="header_user_tel">Введите телефон</label>
+						<div class="capture-card__form-input-wrap">
+							<input class="form__input capture-card__form-input" type="tel" name="header_user_tel" id="header_user_tel" placeholder="+7 (___) ___-__-__"
+								data-mask="+7 (___) ___-__-__">
+							<input class="form__submit btn capture-card__form-submit" type="submit" value="Получить дизайн проект">
+						</div>
 						<p class="hero-policy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и
 							соглашаетесь с <a href="#">Политикой конфиденциальности</a> </p>
 					</form>
 				</div>
-				<button class="hero-arrow"></button>
+				<div class="hero-arrow"></div>
 			</div>
 		</div>
 	</main>
 
-	<div class=" block-separator block-separator__about"></div>
+	<div class="block-separator block-separator__about"></div>
 	<div class="wave-wrapper">
-		<section class="about">
+		<section class="about" id="about" data-aos="fade-up">
 			<div class="container">
 				<h2 class="about-title block-title">Почему сотни клиентов доверяют нам оформление своих объектов — от
 					небольшого торгового центра до главной елки страны?</h2>
 				<div class="about-stars-wrapper">
 					<div class="about-grid">
 						<div class="about-row one">
-							<div class="about-item left">
+							<div class="about-item left" data-aos="fade-right">
 								<div class="about-item__text text"><span class="text__yellow">Собственное производство 3000 м2</span>
 									— производим каркасную иллюминацию
 									и
 									<span class="text__yellow">украшаем объекты любойсложности с 2011 года</span></div>
 								<img src="img/about/gear.png" alt="" class="about-item__icon right">
 							</div>
-							<div class="about-item right">
+							<div class="about-item right" data-aos="fade-left">
 								<img src="img/about/breafcase.png" alt="" class="about-item__icon left">
 								<div class="about-item__text text">Вы получите слаженную команду профессионалов — <span class="text__yellow">более 600
 										выполненных работ и 1500 фигур в каталоге</span></div>
 							</div>
 						</div>
 						<div class="about-row two">
-							<div class="about-item left ">
+							<div class="about-item left" data-aos="fade-right">
 								<div class="about-item__text text">С нами Вы реализуете любые идеи и получите уникальный <span class="text__yellow">дизайн
 										европейского уровня</span></div>
 								<img src="img/about/lamp.png" alt="" class="about-item__icon right">
 							</div>
-							<div class="about-item right">
+							<div class="about-item right" data-aos="fade-left">
 								<img src="img/about/calendar.png" alt="" class="about-item__icon left">
 								<div class="about-item__text text">Вы получите украшенный объект точно в срок — <span class="text__yellow">официально несем
 										ответственность за соблюдение сроков по договору</span></div>
 							</div>
 						</div>
 						<div class="about-row three">
-							<div class="about-item left ">
+							<div class="about-item left" data-aos="fade-right">
 								<div class="about-item__text text"><span class="text__yellow">Вы экономите до 60% бюджета</span> по
 									сравнению с европейскими
 									производителями</div>
 								<img src="img/about/hand.png" alt="" class="about-item__icon right">
 							</div>
-							<div class="about-item right">
+							<div class="about-item right" data-aos="fade-left">
 								<img src="img/about/shild.png" alt="" class="about-item__icon left">
 								<div class="about-item__text text">Вы в безопасности — наша продукция <span class="text__yellow">соответствует всем требованиям
 										технического регламента Евразийского союза</span></div>
 							</div>
 						</div>
 						<div class="about-row four">
-							<div class="about-item left ">
+							<div class="about-item left" data-aos="fade-right">
 								<div class="about-item__text text"><span class="text__yellow">Вы получите полный спектр услуг</span> —
 									от отрисовки дизайна до монтажа и
 									обслуживания без посредников</div>
 								<img src="img/about/instruments.png" alt="" class="about-item__icon right">
 							</div>
-							<div class="about-item right">
+							<div class="about-item right" data-aos="fade-left">
 								<img src="img/about/geotag.png" alt="" class="about-item__icon left">
 								<div class="about-item__text text">С комфортом для Вас доставляем и <span class="text__yellow">осуществляем монтаж во всех
 										городах России</span></div>
@@ -141,7 +179,8 @@
 			</div>
 		</section>
 	</div>
-	<div class="block-separator block-separator__after"></div>
+	<div class="block-separator block-separator__after block-separator__after-about"></div>
+
 
 	<section class="smi">
 		<div class="container">
@@ -214,67 +253,67 @@
 		<div class="container">
 			<h2 class="work-areas-title block-title">Осуществляем полный цикл работ и украшаем</h2>
 			<div class="work-areas__grid">
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-1.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Городские новогодние елки</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-2.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Городские улицы и площади</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-3.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Парки и скверы</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-4.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Торговые центры и магазины</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-5.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Бизнес центры</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-6.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Коттеджные поселки</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-7.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Жилые комплексы</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-8.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Фасады зданий</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-9.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Отели и гостиницы</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-10.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">АЗС</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-11.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Витрины</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-12.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Дворы частных домов</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-13.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Клубные дома</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-14.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Рестораны и кафе</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-15.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Дома отдыха и санатории</p>
 				</div>
-				<div class="work-areas__item">
+				<div class="work-areas__item" data-aos="zoom-out">
 					<img src="img/work-areas/item-16.png" alt="" class="work-areas__img">
 					<p class="work-areas__name">Медицинские учреждения</p>
 				</div>
@@ -312,7 +351,7 @@
 						соглашаетесь с <a href="#">Политикой конфиденциальности</a> </p>
 				</div>
 				<div class="card-portfolio-picture-area card__picture-area card-stars-bg">
-					<img src="img/card-portfolio/promo-book.png" alt="" class="card-portfolio-picture-area__img">
+					<img src="img/card-portfolio/promo-book.png" alt="" class="card-portfolio-picture-area__img" data-aos="zoom-in">
 				</div>
 			</div>
 		</div>
@@ -398,19 +437,19 @@
 			<div class="container">
 				<div class="stars-block stars-block__ar-top"></div>
 				<div class="ar-steps blur-card">
-					<div class="ar-step text">
+					<div class="ar-step text" data-aos="fade-right" data-aos-delay="200">
 						<p class="ar-step__num">1</p>
 						<p class="ar-step__text">Скачиваем приложение и наводим на специальную метку на конструкции</p>
 					</div>
-					<div class="ar-step text">
+					<div class="ar-step text" data-aos="fade-right" data-aos-delay="400">
 						<p class="ar-step__num">2</p>
 						<p class="ar-step__text">Через экран смартфона или планшета видим виртуальный контент — дополнительную реальность</p>
 					</div>
-					<div class="ar-step text">
+					<div class="ar-step text" data-aos="fade-right" data-aos-delay="600">
 						<p class="ar-step__num">3</p>
 						<p class="ar-step__text">Делаем фото с виртуальными героями или динамичное видео с дополненной реальностью</p>
 					</div>
-					<div class="ar-step text">
+					<div class="ar-step text" data-aos="fade-right" data-aos-delay="800">
 						<p class="ar-step__num">4</p>
 						<p class="ar-step__text">Отправляем друзьям и делимся в социальных сетях и месседжерах</p>
 					</div>
@@ -438,40 +477,39 @@
 		</div>
 	</section>
 
-	<section class="catalog">
+	<section class="catalog" id="catalog">
 		<div class="container">
 			<h2 class="catalog-title block-title">Наш каталог</h2>
 			<div class="catalog-grid">
-				<div class="stars-block stars-block__catalog-top"></div>
-				<div class="catalog-item blur-card">
+				<div class="catalog-item blur-card" data-aos="flip-up">
 					<img src="img/catalog/item-1.png" alt="" class="catalog-item__img">
 					<p class="catalog-item__name text">3D-фигуры</p>
 				</div>
-				<div class="catalog-item blur-card">
+				<div class="catalog-item blur-card" data-aos="flip-up">
 					<img src="img/catalog/item-2.png" alt="" class="catalog-item__img">
 					<p class="catalog-item__name text">Ёлки</p>
 				</div>
-				<div class="catalog-item blur-card">
+				<div class="catalog-item blur-card" data-aos="flip-up">
 					<img src="img/catalog/item-3.png" alt="" class="catalog-item__img">
 					<p class="catalog-item__name text">Консоли</p>
 				</div>
-				<div class="catalog-item blur-card">
+				<div class="catalog-item blur-card" data-aos="flip-up">
 					<img src="img/catalog/item-4.png" alt="" class="catalog-item__img">
 					<p class="catalog-item__name text">Подвесы</p>
 				</div>
-				<div class="catalog-item blur-card">
+				<div class="catalog-item blur-card" data-aos="flip-up">
 					<img src="img/catalog/item-5.png" alt="" class="catalog-item__img">
 					<p class="catalog-item__name text">Фонтаны</p>
 				</div>
-				<div class="catalog-item blur-card">
+				<div class="catalog-item blur-card" data-aos="flip-up">
 					<img src="img/catalog/item-6.png" alt="" class="catalog-item__img">
 					<p class="catalog-item__name text">2D-фигуры</p>
 				</div>
-				<div class="catalog-item blur-card">
+				<div class="catalog-item blur-card" data-aos="flip-up">
 					<img src="img/catalog/item-7.png" alt="" class="catalog-item__img">
 					<p class="catalog-item__name text">Панно</p>
 				</div>
-				<div class="catalog-item blur-card">
+				<div class="catalog-item blur-card" data-aos="flip-up">
 					<img src="img/catalog/item-8.png" alt="" class="catalog-item__img">
 					<p class="catalog-item__name text">Арки</p>
 				</div>
@@ -531,7 +569,7 @@
 			<div class="container">
 				<h2 class="guarantees-title block-title">Гарантии!</h2>
 				<div class="guarantees-grid">
-					<div class="guarantees-item">
+					<div class="guarantees-item" data-aos="fade-right">
 						<div class="guarantees-item__icon">
 							<img src="img/guarantees/item-1.png" alt="" class="guarantees-item__img">
 						</div>
@@ -541,7 +579,7 @@
 							<p class="guarantees-item__descr text-roboto">Производим, доставляем и монтируем изделия точно в срок! Все сроки утверждаем с Вами и прописываем в договоре</p>
 						</div>
 					</div>
-					<div class="guarantees-item">
+					<div class="guarantees-item" data-aos="fade-up">
 						<div class="guarantees-item__icon">
 							<img src="img/guarantees/item-2.png" alt="" class="guarantees-item__img">
 						</div>
@@ -551,7 +589,7 @@
 							<p class="guarantees-item__descr text-roboto">Цена согласовывается с Вами заранее и не изменяется в процессе производства</p>
 						</div>
 					</div>
-					<div class="guarantees-item">
+					<div class="guarantees-item" data-aos="fade-left">
 						<div class="guarantees-item__icon">
 							<img src="img/guarantees/item-3.png" alt="" class="guarantees-item__img">
 						</div>
@@ -624,8 +662,7 @@
 			</div>
 		</section>
 
-		<section class="team">
-			<!-- <div class="stars-block stars-block__team"></div> -->
+		<section class="team" id="team">
 			<div class="container">
 				<h2 class="team-title block-title">Наша команда</h2>
 				<div class="team-grid">
@@ -714,35 +751,35 @@
 				</div>
 				<div class="manufacture-images-group">
 					<div class="manufacture-images__item">
-						<img src="img/manufacture/item-1.jpg" alt="" class="manufacture-images__img">
+						<img src="img/manufacture/item-1.jpg" alt="" class="manufacture-images__img" data-aos="fade-left">
 					</div>
 					<div class="manufacture-images__item">
-						<img src="img/manufacture/item-2.jpg" alt="" class="manufacture-images__img">
+						<img src="img/manufacture/item-2.jpg" alt="" class="manufacture-images__img" data-aos="fade-left">
 					</div>
 					<div class="manufacture-images__item">
-						<img src="img/manufacture/item-3.jpg" alt="" class="manufacture-images__img">
-					</div>
-				</div>
-				<div class="manufacture-images-group">
-					<div class="manufacture-images__item">
-						<img src="img/manufacture/item-4.jpg" alt="" class="manufacture-images__img">
-					</div>
-					<div class="manufacture-images__item">
-						<img src="img/manufacture/item-5.jpg" alt="" class="manufacture-images__img">
-					</div>
-					<div class="manufacture-images__item">
-						<img src="img/manufacture/item-6.jpg" alt="" class="manufacture-images__img">
+						<img src="img/manufacture/item-3.jpg" alt="" class="manufacture-images__img" data-aos="fade-left">
 					</div>
 				</div>
 				<div class="manufacture-images-group">
 					<div class="manufacture-images__item">
-						<img src="img/manufacture/item-7.jpg" alt="" class="manufacture-images__img">
+						<img src="img/manufacture/item-4.jpg" alt="" class="manufacture-images__img" data-aos="fade-left" data-aos-delay="800">
 					</div>
 					<div class="manufacture-images__item">
-						<img src="img/manufacture/item-8.jpg" alt="" class="manufacture-images__img">
+						<img src="img/manufacture/item-5.jpg" alt="" class="manufacture-images__img" data-aos="fade-left" data-aos-delay="800">
 					</div>
 					<div class="manufacture-images__item">
-						<img src="img/manufacture/item-9.jpg" alt="" class="manufacture-images__img">
+						<img src="img/manufacture/item-6.jpg" alt="" class="manufacture-images__img" data-aos="fade-left" data-aos-delay="800">
+					</div>
+				</div>
+				<div class="manufacture-images-group">
+					<div class="manufacture-images__item">
+						<img src="img/manufacture/item-7.jpg" alt="" class="manufacture-images__img" data-aos="fade-left" data-aos-delay="1200">
+					</div>
+					<div class="manufacture-images__item">
+						<img src="img/manufacture/item-8.jpg" alt="" class="manufacture-images__img" data-aos="fade-left" data-aos-delay="1200">
+					</div>
+					<div class="manufacture-images__item">
+						<img src="img/manufacture/item-9.jpg" alt="" class="manufacture-images__img" data-aos="fade-left" data-aos-delay="1200">
 					</div>
 				</div>
 			</div>
@@ -755,7 +792,6 @@
 			<div class="work-steps-grid">
 				<div class="stars-block stars-block__work-steps-top"></div>
 				<div class="stars-block stars-block__work-steps-center"></div>
-
 				<div class="work-steps-item">
 					<div class="work-steps-item__text work-steps-item__text-right">
 						<h3 class="work-steps-item__title">Обращение в нашу компанию</h3>
@@ -859,67 +895,65 @@
 	</section>
 
 	<section class="faq">
-		<div class="container">
-			<h2 class="faq-title block-title">Ответы на частые вопросы </h2>
-			<div class="faq-grid">
-				<div class="faq-item">
-					<div class="faq-item__question">Почему у Вас дешевле, чем у конкурентов?</div>
-					<svg class="faq-item__plus active">
-						<use xlink:href="#plus"></use>
-					</svg>
-					<div class="faq-item__answer active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit maiores adipisci ratione voluptatum, veritatis perferendis, qui amet
-						exercitationem ut nemo quidem laudantium quos ipsa mollitia nobis temporibus aperiam commodi blanditiis.</div>
+		<h2 class="faq-title block-title">Ответы на частые вопросы </h2>
+		<div class="faq-grid">
+			<div class="faq-item">
+				<div class="faq-item__question">Почему у Вас дешевле, чем у конкурентов?</div>
+				<svg class="faq-item__plus active">
+					<use xlink:href="#plus"></use>
+				</svg>
+				<div class="faq-item__answer active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit maiores adipisci ratione voluptatum, veritatis perferendis, qui amet
+					exercitationem ut nemo quidem laudantium quos ipsa mollitia nobis temporibus aperiam commodi blanditiis.</div>
+			</div>
+			<div class="faq-item">
+				<div class="faq-item__question">Почему мне нужно заказывать новогоднюю иллюминацию заранее?</div>
+				<svg class="faq-item__plus">
+					<use xlink:href="#plus"></use>
+				</svg>
+				<div class="faq-item__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere corrupti alias enim error, fugit hic pariatur laudantium, delectus dolorem,
+					distinctio assumenda laborum id quaerat provident! Suscipit voluptatibus similique mollitia repellat!</div>
+			</div>
+			<div class="faq-item">
+				<div class="faq-item__question">Для чего мне украшать свой торговый объект?</div>
+				<svg class="faq-item__plus">
+					<use xlink:href="#plus"></use>
+				</svg>
+				<div class="faq-item__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus assumenda unde! Id expedita quo voluptates assumenda placeat, laborum
+					odio magnam omnis totam rem alias ipsam adipisci asperiores pariatur ratione!</div>
+			</div>
+			<div class="faq-item">
+				<div class="faq-item__question">В какие сроки вы изготавливаете каркасную иллюминацию?</div>
+				<svg class="faq-item__plus">
+					<use xlink:href="#plus"></use>
+				</svg>
+				<div class="faq-item__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus assumenda unde! Id expedita quo voluptates assumenda placeat, laborum
+					odio magnam omnis totam rem alias ipsam adipisci asperiores pariatur ratione!</div>
+			</div>
+			<div class="faq-item">
+				<div class="faq-item__question">Какие сроки доставки готовой иллюминации?</div>
+				<svg class="faq-item__plus">
+					<use xlink:href="#plus"></use>
+				</svg>
+				<div class="faq-item__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus assumenda unde! Id expedita quo voluptates assumenda placeat, laborum
+					odio magnam omnis totam rem alias ipsam adipisci asperiores pariatur ratione!</div>
+			</div>
+			<div class="faq-item">
+				<div class="faq-item__question">Нужно ли мне обращаться в другие компании, если важно изготовить не только каркасные иллюминированные фигуры,а еще и украсить объект декором?
 				</div>
-				<div class="faq-item">
-					<div class="faq-item__question">Почему мне нужно заказывать новогоднюю иллюминацию заранее?</div>
-					<svg class="faq-item__plus">
-						<use xlink:href="#plus"></use>
-					</svg>
-					<div class="faq-item__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere corrupti alias enim error, fugit hic pariatur laudantium, delectus dolorem,
-						distinctio assumenda laborum id quaerat provident! Suscipit voluptatibus similique mollitia repellat!</div>
-				</div>
-				<div class="faq-item">
-					<div class="faq-item__question">Для чего мне украшать свой торговый объект?</div>
-					<svg class="faq-item__plus">
-						<use xlink:href="#plus"></use>
-					</svg>
-					<div class="faq-item__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus assumenda unde! Id expedita quo voluptates assumenda placeat, laborum
-						odio magnam omnis totam rem alias ipsam adipisci asperiores pariatur ratione!</div>
-				</div>
-				<div class="faq-item">
-					<div class="faq-item__question">В какие сроки вы изготавливаете каркасную иллюминацию?</div>
-					<svg class="faq-item__plus">
-						<use xlink:href="#plus"></use>
-					</svg>
-					<div class="faq-item__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus assumenda unde! Id expedita quo voluptates assumenda placeat, laborum
-						odio magnam omnis totam rem alias ipsam adipisci asperiores pariatur ratione!</div>
-				</div>
-				<div class="faq-item">
-					<div class="faq-item__question">Какие сроки доставки готовой иллюминации?</div>
-					<svg class="faq-item__plus">
-						<use xlink:href="#plus"></use>
-					</svg>
-					<div class="faq-item__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus assumenda unde! Id expedita quo voluptates assumenda placeat, laborum
-						odio magnam omnis totam rem alias ipsam adipisci asperiores pariatur ratione!</div>
-				</div>
-				<div class="faq-item">
-					<div class="faq-item__question">Нужно ли мне обращаться в другие компании, если важно изготовить не только каркасные иллюминированные фигуры,а еще и украсить объект декором?
-					</div>
-					<svg class="faq-item__plus">
-						<use xlink:href="#plus"></use>
-					</svg>
-					<div class="faq-item__answer">Мы осуществляем полный спектр услуг и предлагаем комплексные решения для декорирования и благоустройства городов, площадей,
-						административных зданий, ТРЦ, отелей и ресторанов. Изготавливаем каркасные 2D, 3D световые фигуры, высотные ели и украшаем объекты праздничной иллюминацией. Разрабатываем
-						дизайн, производим, доставляем, монтируем и осуществляем сервисное обслуживание. Мы сделаем все под ключ.</div>
-				</div>
-				<div class="faq-item">
-					<div class="faq-item__question">Мы хотим стать вашими партнерами. Это возможно?</div>
-					<svg class="faq-item__plus">
-						<use xlink:href="#plus"></use>
-					</svg>
-					<div class="faq-item__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus assumenda unde! Id expedita quo voluptates assumenda placeat, laborum
-						odio magnam omnis totam rem alias ipsam adipisci asperiores pariatur ratione!</div>
-				</div>
+				<svg class="faq-item__plus">
+					<use xlink:href="#plus"></use>
+				</svg>
+				<div class="faq-item__answer">Мы осуществляем полный спектр услуг и предлагаем комплексные решения для декорирования и благоустройства городов, площадей,
+					административных зданий, ТРЦ, отелей и ресторанов. Изготавливаем каркасные 2D, 3D световые фигуры, высотные ели и украшаем объекты праздничной иллюминацией. Разрабатываем
+					дизайн, производим, доставляем, монтируем и осуществляем сервисное обслуживание. Мы сделаем все под ключ.</div>
+			</div>
+			<div class="faq-item">
+				<div class="faq-item__question">Мы хотим стать вашими партнерами. Это возможно?</div>
+				<svg class="faq-item__plus">
+					<use xlink:href="#plus"></use>
+				</svg>
+				<div class="faq-item__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus assumenda unde! Id expedita quo voluptates assumenda placeat, laborum
+					odio magnam omnis totam rem alias ipsam adipisci asperiores pariatur ratione!</div>
 			</div>
 		</div>
 	</section>
@@ -928,12 +962,14 @@
 		<div class="container">
 			<div class="subscribe-wrap">
 				<h2 class="subscribe-title block-title">Подпишитесь на рассылку</h2>
-				<div class="subscribe-card blur-card ">
-					<p class="subscribe-card__title">Если хотите первыми узнавать о новинках светового декора, быть в курсе наших акций, спецпредложений и получить подарок к первому заказу!</>
+				<div class="subscribe-card blur-card capture-card">
+					<p class="capture-card__title">Если хотите первыми узнавать о новинках светового декора, быть в курсе наших акций, спецпредложений и получить подарок к первому заказу!</>
 						<form action="#" class="form">
-							<p class="form__text subscribe-card__text" for="user_email">Введите свой e-mail в форму ниже</p>
-							<input class="form__input subscribe-card__input" type="email" name="user_email" id="user_email" placeholder="email@exemple.com">
-							<input class="form__submit btn subscribe-card__submit" type="submit" value="Подписаться">
+							<label class="form__text capture-card__form-label" for="user_email">Введите свой e-mail в форму ниже</label>
+							<div class="capture-card__form-input-wrap">
+								<input class="form__input capture-card__form-input" type="email" name="user_email" id="user_email" placeholder="email@exemple.com">
+								<input class="form__submit btn capture-card__form-submit" type="submit" value="Подписаться">
+							</div>
 						</form>
 						<p class="card-policy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и
 							соглашаетесь с <a href="#">Политикой конфиденциальности</a> </p>
@@ -942,7 +978,7 @@
 		</div>
 	</section>
 
-	<div class="block-separator block-separator__before"></div>
+	<div class="block-separator block-separator__footer"></div>
 	<div class="wave-wrapper">
 		<section class="contacts">
 			<div class="container">
@@ -974,16 +1010,15 @@
 								<a href="#" class="">WhatsApp</a>
 							</div>
 						</div>
-
 					</div>
 				</div>
-				<!-- <div class="contacts-map" style="position:relative;overflow:hidden;">
+				<div class="contacts-map" style="position:relative;overflow:hidden;">
 					<a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a
 						href="https://yandex.ru/maps/213/moscow/house/16_ya_parkovaya_ulitsa_20bs2/Z04YfgRiSU0GQFtvfXRxdX5lbA==/?ll=37.832395%2C55.804295&utm_medium=mapframe&utm_source=maps&z=16.54"
 						style="color:#eee;font-size:12px;position:absolute;top:14px;">16-я Парковая улица, 20Бс2 — Яндекс.Карты</a>
 					<iframe src="https://yandex.ru/map-widget/v1/-/CCUUm2QjhB" frameborder="1" allowfullscreen="true" style="position:relative;">
 					</iframe>
-				</div> -->
+				</div>
 			</div>
 		</section>
 		<footer class="footer">
@@ -991,7 +1026,7 @@
 				<div class="footer-grid">
 					<nav class="footer-catalog">
 						<ul class="footer__list"> Каталог
-							<li class="footer__item text"><a href="#" class="footer__link">3D-фигуры</a></li>
+							<li class="footer__item text"><a href="#catalog" class="footer__link">3D-фигуры</a></li>
 							<li class="footer__item text"><a href="#" class="footer__link">Елки</a></li>
 							<li class="footer__item text"><a href="#" class="footer__link">Консоли</a></li>
 							<li class="footer__item text"><a href="#" class="footer__link">Подвесы</a></li>
@@ -1124,6 +1159,8 @@
 	<script src="js/main.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/slider.js"></script>
+	<script src="js/libs/vanilla-masker.min.js"></script>
+	<script src="js/libs/aos.js"></script>
 </body>
 
 </html>

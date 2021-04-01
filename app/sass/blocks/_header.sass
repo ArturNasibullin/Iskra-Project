@@ -8,7 +8,7 @@
 		z-index: 500
 		width: 100%
 		display: grid
-		grid-template-columns: 6% 42% 7% 36%
+		grid-template-columns: 5% 45% 6% 40%
 		column-gap: 30px
 		grid-template-rows: 100px
 		align-items: center
@@ -36,7 +36,7 @@
 		grid-area: logo
 		justify-content: center
 		img
-			width: 80px
+			width: 70px
 		@include _768
 			display: none
 	&-menu
@@ -47,21 +47,12 @@
 		flex-flow: row wrap
 		transition: height 0.3s
 		@include _768
-			visibility: hidden
-			height: 0
-		&.active
-			visibility: visible
-			position: fixed
-			width: 100vw
-			height: 100vh
-			top: 0
-			left: 0
-			justify-content: center
-			align-items: center
-			flex-flow: column wrap
-			background-color: $colors__light-gray
-		&__link
+			display: none
+		li
 			margin-right: 20px
+			&:last-child
+				margin-right: 0
+		&__link
 			transition: background-color 0.3s
 			position: relative
 			&:before
@@ -131,36 +122,60 @@
 			&::before
 				transition: all 1s
 				background-image: url(../img/icons/call.svg)
-	&-search
-		align-self: center
-		grid-area: search
+	&-form
 		display: flex
+		flex-direction: row
 		align-items: center
-		@include fluidFontSize(14px, 16px)
-		width: 78px
-		background-color: transparent
-		border: 0
-		color: $colors__text
+		position: relative
 		@include _768
 			grid-column: 2/3
 			width: 100%
-			span
-				display: none
 		@include _480
 			margin-left: 20px
-		&::before
-			content: ''
-			background-image: url(../img/icons/find.svg)
-			background-position: 0 0
-			background-repeat: no-repeat
-			background-size: cover
-			width: 24px
-			height: 24px
-			display: inline-block
-			margin-right: 8px
-			@include _768
-				width: 50px
-				height: 50px
+		&__label
+			padding-top: 10px
+			&::before
+				content: "\26B2"
+				display: inline-block
+				transform: rotate(-45deg)
+				font-size: 3rem
+				color: rgb(238, 238, 238)
+				margin-right: 8px
+				@include _768
+					font-size: 8rem
+		&__search
+			grid-area: search
+			@include fluidFontSize(14px, 16px)
+			width: 100%
+			background-color: transparent
+			border: 0
+			color: $colors__text
+			transition: all 0.2s
+			&::placeholder
+				color: $colors__white
+			@include _480
+				position: absolute
+				left: -100px
+				width: 0
+				bottom: 0
+				visibility: hidden
+				height: 0
+				opacity: 0
+				&::placeholder
+					color: transparent
+			&.active
+				@include _480
+					visibility: visible
+					height: auto
+					opacity: 1
+					position: absolute
+					background-color: $colors__white
+					left: -100px
+					bottom: -30px
+					font-size: 2.5rem
+					width: 500%
+					color: $colors__base
+					border-radius: 4px
 	&-connect-btns
 		grid-area: connect
 		display: flex

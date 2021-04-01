@@ -9,6 +9,10 @@
 			padding: 90px 40px 30px
 			justify-content: center
 			grid-gap: 50px
+		@include _480
+			grid-template-columns: 100%
+			padding: 90px 10px 30px
+
 	&-item
 		margin-top: 80px
 		display: flex
@@ -26,7 +30,8 @@
 			left: calc( 50% - 44px )
 		&__text
 			padding: 90px 40px 30px
-			@include _768
+			@include _480
+				padding: 90px 10px 30px
 		&__percentage
 			font-family: $font-family__roboto
 			font-weight: $font-weight__roboto--regular

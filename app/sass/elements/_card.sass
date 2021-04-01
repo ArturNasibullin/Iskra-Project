@@ -15,12 +15,16 @@
 		flex-direction: column
 		@include _768
 			padding: 100px 0
+		@include _480
+			padding: 0
 	&__action-area
 		background-color: $colors__white
 		padding: 30px 70px
 		color: $colors__dark-blue
 		@include _979
 			padding: 30px
+		@include _480
+			padding: 15px
 	&-form
 		&__header
 			color: $colors__dark-blue
@@ -38,6 +42,9 @@
 			@include _768
 				width: 100%
 				font-size: 3.2rem
+			@include _480
+				font-size: 2.8rem
+
 	&-policy
 		color: $colors__gray-light
 		text-align: center

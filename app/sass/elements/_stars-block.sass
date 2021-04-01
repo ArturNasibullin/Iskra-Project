@@ -7,7 +7,7 @@
 	height: 800px
 	border-radius: 50%
 	position: absolute
-	z-index: -1
+	z-index: -4
 	@include _768
 		width: 300px
 		height: 300px
@@ -18,8 +18,9 @@
 	&__catalog-top
 		right: -50px
 		top: -450px
-		width: 1000px
-		height: 1000px
+		@include _768
+			display: none
+
 	&__team
 		top: 100px
 		left: 60px
