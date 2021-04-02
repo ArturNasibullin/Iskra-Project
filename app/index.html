@@ -11,14 +11,16 @@
 	<meta name="keywords" content="" />
 
 	<!-- Add styles -->
-	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/style.min.css" />
 	<link rel="stylesheet" href="css/libs/splide.min.css" />
-	<link rel="stylesheet" href="fonts/style.css" />
 	<link rel="stylesheet" href="css/libs/aos.css" />
+	<link rel="stylesheet" href="css/libs/universal-parallax.min.css" />
+	<link rel="stylesheet" href="fonts/style.css" />
 
 </head>
 
 <body>
+
 	<header class="header">
 		<button class="burger header__nav-btn">
 			<span class="burger__span"></span>
@@ -90,6 +92,7 @@
 
 	<main class="hero" id="hero">
 		<div class="hero-wrap">
+			<div class="parallax" data-parallax-image="img/hero-bg.jpg"></div>
 			<div class="container">
 				<h1 class="hero__title label1">Производим <span class="text__yellow">каркасную иллюминацию</span> и украшаем
 					объекты любой сложности с экономией до
@@ -223,7 +226,10 @@
 		<div class="container">
 			<h2 class="card-promo-title block-title">Акция</h2>
 			<div class="card-promo__grid card__grid">
-				<div class="card-promo-picture-area card__picture-area">
+				<div class="card-promo-picture-area card__picture-area ">
+					<div class="parallax" data-parallax-image="img/card-promo/promo.jpg">
+					</div>
+
 					<p class="card-promo-picture-area__subtitle"><span class="text__yellow">Получите <br> гирлянду «Бахрома»</span> <br> для оформления <br> своего дома (дачи) <br> <span
 							class="text__yellow">в
 							подарок!</span>
@@ -443,6 +449,7 @@
 			<p class="ar-subtitle text__yellow text">Окунись в атмосферу сказки и сделай фото <br>с любимыми персонажами</p>
 		</div>
 		<div class="ar-wrap">
+			<div class="parallax" data-parallax-image="img/ar/ar-bg.jpg"></div>
 			<div class="container">
 				<div class="stars-block stars-block__ar-top"></div>
 				<div class="ar-steps blur-card">
@@ -1175,8 +1182,7 @@
 	<script src="js/main.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/slider.js"></script>
-	<script src="js/libs/vanilla-masker.min.js"></script>
-	<script src="js/libs/aos.js"></script>
+	<script src="js/libs/universal-parallax.min.js"></script>
 	<!-- <script src="js/canvas-snow.js"></script> -->
 </body>
 

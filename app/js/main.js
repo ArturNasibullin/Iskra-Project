@@ -65,14 +65,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 	};
 
-	// Input Masks
-	VMasker(document.querySelectorAll('input[type="tel"]')).maskPattern('+9 (999) 999-99-99');
-
-	// Scroll animatios
-	AOS.init({
-		duration: 1500,
-	});
-
 	// Snowfall animations
 	let snowfall = function (block) {
 		origContainer = document.querySelector(block);
@@ -149,4 +141,15 @@ window.addEventListener('DOMContentLoaded', () => {
 	searchBtnToggle();
 	snowfall('.hero');
 	snowfall('.ar');
+
+	// Input Masks
+	VMasker(document.querySelectorAll('input[type="tel"]')).maskPattern('+9 (999) 999-99-99');
+
+	// Parallax
+	new universalParallax().init();
+
+	// Scroll animatios
+	AOS.init({
+		duration: 1500,
+	});
 });

@@ -26,15 +26,7 @@ function browsersync() {
 }
 
 function libsJS() {
-	return src(
-		[
-			// Берём файлы из источников
-			// "node_modules/jquery/dist/jquery.min.js", // Пример подключения библиотеки
-			'app/js/libs/splide.min.js',
-			// "app/js/app.js", // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
-		],
-		{ allowEmpty: true }
-	)
+	return src(['app/js/libs/aos.js', 'app/js/libs/splide.min.js', 'app/js/libs/vanilla-masker.min.js'], { allowEmpty: true })
 		.pipe(concat('libs.min.js')) // Конкатенируем в один файл
 		.pipe(uglify()) // Сжимаем JavaScript
 		.pipe(dest('app/js/')) // Выгружаем готовый файл в папку назначения
@@ -46,21 +38,14 @@ function styles() {
 		.pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
 		.pipe(concat('style.min.css')) // Конкатенируем в файл style.min.js
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
-		.pipe(shorthand())
 		.pipe(gcmq()) //Группируем медиазапросы
-		.pipe(
-			cleancss({
-				level: { 1: { specialComments: 0 } },
-				format: 'beautify',
-			})
-		) // Минифицируем стили
 		.pipe(sourcemaps.write('.')) // создание карты css.map в текущей папке
 		.pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
 		.pipe(browserSync.stream()); // Сделаем инъекцию в браузер
 }
 
 function images() {
-	return src('app/img/src/**/*') // Берём все изображения из папки источника
+	return src('app/img/**/*') // Берём все изображения из папки источника
 		.pipe(newer('app/img/dest/')) // Проверяем, было ли изменено (сжато) изображение ранее
 		.pipe(
 			imagemin({
@@ -72,11 +57,11 @@ function images() {
 				use: [pngquant()],
 			})
 		) // Сжимаем и оптимизируем изображеня
-		.pipe(dest('app/images/dest/')); // Выгружаем оптимизированные изображения в папку назначения
+		.pipe(dest('app/img/dest/')); // Выгружаем оптимизированные изображения в папку назначения
 }
 
 function cleanimg() {
-	return del('app/images/dest/**/*', { force: true }); // Удаляем всё содержимое папки "app/images/dest/"
+	return del('app/img/dest/**/*', { force: true }); // Удаляем всё содержимое папки "app/images/dest/"
 }
 
 function buildcopy() {
@@ -84,8 +69,9 @@ function buildcopy() {
 		[
 			// Выбираем нужные файлы
 			'app/css/**/*.css',
-			'app/js/**/*.js',
 			'app/img/dest/**/*',
+			'app/fonts/**/*',
+			'app/js/**/*.js',
 			'app/**/*.html',
 		],
 		{ base: 'app' }

@@ -17,7 +17,6 @@
 		@include _1250
 			grid-template-columns: 15% 70% 10%
 			grid-template-rows: 1fr 1fr
-			// grid-template-areas: "logo menu search"
 			justify-items: center
 		@include _768
 			width: 100%
@@ -78,7 +77,7 @@
 		flex-flow: column nowrap
 		align-items: flex-start
 		padding: 12px 0 12px 75px
-		border: 1px solid rgba(255, 255, 255, 0.24)
+		border: 1px solid $colors__border
 		height: 70px
 		border-radius: 40px
 		position: relative
@@ -86,6 +85,8 @@
 		line-height: 0.9
 		background-color: transparent
 		transition: all 0.3s
+		@include _480
+			padding: 0px 0 3px 45px
 		&__text-big
 			display: block
 			font-family: $font-family__gilroy
@@ -97,7 +98,7 @@
 			@include _768
 				font-size: 2.3rem
 			@include _480
-				display: none
+				font-size: 1.7rem
 		&::before
 			content: ""
 			background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #FFD800
@@ -110,9 +111,14 @@
 			position: absolute
 			top: calc( 50% - 35px)
 			left: 0
+			@include _480
+				width: 50px
+				height: 50px
+				top: calc( 50% - 25px)
+				left: -10px
 		&:hover
 			background: rgba(9, 37, 88, 0.6)
-			border: 1px solid #085FF0
+			border: 1px solid $colors__light-blue
 		&__envelope
 			&::before
 				background-image: url(../img/icons/envelope.png)
@@ -124,6 +130,7 @@
 			&::before
 				transition: all 1s
 				background-image: url(../img/icons/call.svg)
+
 	&-form
 		display: flex
 		flex-direction: row
@@ -203,16 +210,6 @@
 			@include _979
 				width: 100%
 			@include _480
-				width: 60px
-				border: none
-				color: transparent
-			&.active
-				a
-					visibility: visible
-					opacity: 1
-					bottom: -60px
-				@include _480
-				&:hover
-					border: 0
-					&::before
-						transform: rotate(90deg)
+				width: 100%
+				height: 50px
+				margin-top: 20px
