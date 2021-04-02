@@ -19,7 +19,7 @@
 </head>
 
 <body>
-	<!-- <header class="header">
+	<header class="header">
 		<button class="burger header__nav-btn">
 			<span class="burger__span"></span>
 		</button>
@@ -41,10 +41,15 @@
 						<input type="text" id="header_search" name="header_search" class="header-form__search" placeholder="Поиск"></input>
 					</form>
 					<div class="header-connect-btns">
-						<a href="mailto:info@iskraled.com" class="header-connect-btns__item header-btn header-btn__envelope"> <span class="header-btn__text-big">info@iskraled.com</span>
-							<br> Отправить сообщение</a>
-						<a href="tel:+7 499 404-17-80" class="header-connect-btns__item header-btn header-btn__call"> <span class="header-btn__text-big"> +7 499 404-17-80</span><br>
-							Обратный звонок
+						<div class="header-connect-btns__item header-btn header-btn__envelope">
+							<a href="mailto:info@iskraled.com"> <span class="header-btn__text-big">info@iskraled.com</span></a>
+							<p data-connect="message" class="modal-open">Отправить сообщение</p>
+						</div>
+						<div class="header-connect-btns__item header-btn header-btn__call">
+							<a href="tel:+7 499 404-17-80"> <span class="header-btn__text-big"> +7 499 404-17-80</span></a>
+							<p data-connect="callback" class="modal-open">Обратный звонок</p>
+						</div>
+
 						</a>
 					</div>
 				</div>
@@ -81,7 +86,7 @@
 				</a>
 			</div>
 		</div>
-	</header> -->
+	</header>
 
 	<main class="hero" id="hero">
 		<div class="hero-wrap">
@@ -113,9 +118,10 @@
 			</div>
 		</div>
 	</main>
-
 	<div class="block-separator block-separator__about"></div>
 	<div class="wave-wrapper">
+		<!-- <canvas id="snow"> -->
+
 		<section class="about" id="about" data-aos="fade-up">
 			<div class="container">
 				<h2 class="about-title block-title">Почему сотни клиентов доверяют нам оформление своих объектов — от
@@ -178,6 +184,9 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- </canvas> -->
+
 	</div>
 	<div class="block-separator block-separator__after block-separator__after-about"></div>
 
@@ -1104,33 +1113,40 @@
 
 
 	<!--Modal-->
-	<div class="modal">
+	<div class="modal modal__callback">
 		<div class="modal__overlay">
 			<div class="modal__wrapper">
 				<a class="modal__close" href="#">&times;</a>
-				<h2 class="modal__title">Subscribe</h2>
-				<p class="modal__subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-				<form class="modal-form form" action="mail.php" method="POST">
+				<h2 class="modal__title">Заказать звонок</h2>
+				<form class="modal-form form" action="#" method="POST">
 					<div class="modal-form__wrap">
-						<input class="form__input modal__input" required type="text" name="user_name" id="user_name" placeholder="NAME">
-						<input class="form__input modal__input" required type="text" name="user_phone" id="user_phone" placeholder="COMPANY">
-						<input class="form__input modal__input" required type="email" name="user_email" id="user_email" placeholder="E-MAIL">
-						<input type="submit" class="btn form__btn modal__btn btn--regular" value="Subscribe">
+						<input class="form__input modal__input" required type="tel" name="modal_callback_user_phone" id="user_phone" placeholder="+7 (___) ___ __ __">
+						<input class="form__input modal__input" required type="text" name="modal_callback_user_name" id="modal_callback__user_name" placeholder="Ваше имя">
+						<input type="submit" class="btn form__btn modal__submit" value="Позвоните мне">
 					</div>
 				</form>
+				<p class="card-policy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и
+					соглашаетесь с <a href="#">Политикой конфиденциальности</a> </p>
 			</div>
 		</div>
 	</div>
-
-	<div class="modal-thanks">
+	<div class="modal modal__message">
 		<div class="modal__overlay">
-			<div class="modal__wrapper gradient">
+			<div class="modal__wrapper">
 				<a class="modal__close" href="#">&times;</a>
-				<h2 class="modal-thanks__header"></h2>
+				<h2 class="modal__title">Отправьте сообщение</h2>
+				<form class="modal-form form" action="#" method="POST">
+					<div class="modal-form__wrap">
+						<input class="form__input modal__input" required type="email" name="modal_message_user_email" id="modal_message_user_email" placeholder="Ваш Email">
+						<textarea class="form__input modal__input modal__textarea" required name="modal_message_user_message" id="modal_message_user_message" placeholder="Сообщение"></textarea>
+						<input type="submit" class="btn form__btn modal__submit" value="Отправить сообщение">
+					</div>
+				</form>
+				<p class="card-policy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и
+					соглашаетесь с <a href="#">Политикой конфиденциальности</a> </p>
 			</div>
 		</div>
 	</div>
-
 	<!-- SVG sprite-->
 	<svg style="display: none;">
 		<symbol id="plus">
@@ -1161,6 +1177,7 @@
 	<script src="js/slider.js"></script>
 	<script src="js/libs/vanilla-masker.min.js"></script>
 	<script src="js/libs/aos.js"></script>
+	<!-- <script src="js/canvas-snow.js"></script> -->
 </body>
 
 </html>
